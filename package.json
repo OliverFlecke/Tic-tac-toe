@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "name": "react-template",
+  "private": true,
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  },
+  "dependencies": {
+    "es6-promise": "4.1.0",
+    "jquery": "3.2.1",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
+    "socket.io": "2.1.1"
+  },
+  "devDependencies": {
+    "@types/enzyme": "3.1.10",
+    "@types/jest": "23.0.2",
+    "@types/jquery": "2.0.41",
+    "@types/react": "16.3.17",
+    "@types/react-dom": "16.0.6",
+    "@types/react-test-renderer": "16.0.1",
+    "ajv": "6.5.1",
+    "ajv-keywords": "3.2.0",
+    "babel": "6.23.0",
+    "babel-loader": "7.1.4",
+    "child_process": "1.0.2",
+    "css-loader": "^0.28.11",
+    "csso-webpack-plugin": "1.0.0-beta.4",
+    "enzyme": "3.3.0",
+    "enzyme-to-json": "3.3.0",
+    "express": "4.16.0",
+    "file-loader": "1.1.11",
+    "full-icu": "1.2.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "23.1.0",
+    "mini-css-extract-plugin": "0.4.0",
+    "node-sass": "4.9.0",
+    "postcss": "6.0.22",
+    "postcss-cli": "5.0.0",
+    "postcss-loader": "2.1.5",
+    "postcss-modules": "1.1.0",
+    "postcss-scss": "1.0.5",
+    "process": "0.11.9",
+    "react-hot-loader": "4.3.1",
+    "react-test-renderer": "16.4.0",
+    "sass-loader": "7.0.3",
+    "style-loader": "0.21.0",
+    "ts-jest": "22.4.2",
+    "ts-loader": "4.4.1",
+    "ts-node": "6.1.1",
+    "tslint": "5.10.0",
+    "tslint-react": "3.6.0",
+    "typescript": "2.9.1",
+    "typings-for-css-modules-loader": "1.7.0",
+    "url-loader": "1.0.1",
+    "webpack": "4.12.0",
+    "webpack-cli": "3.0.4",
+    "webpack-dev-server": "3.1.4"
+  },
+  "scripts": {
+    "test": "node --icu-data-dir=node_modules\\full-icu --harmony-proxies .\\node_modules\\jest\\bin\\jest.js",
+    "hot-test": "npm run test -- --watch",
+    "tslint": "node -r ts-node/register .\\node_modules\\tslint\\bin\\tslint -p tsconfig.json --format stylish",
+    "hot": "SET NODE_ENV=development & webpack-dev-server -d --color --watch --hot --host 0.0.0.0 --port 8080",
+    "prescss": "node-sass src/components -o src/components",
+    "build": "SET NODE_ENV=production & webpack-cli -p --color"
+  },
+  "jest": {
+    "modulePaths": [
+      "./src"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss|css)$": "identity-obj-proxy"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
+  }
+}

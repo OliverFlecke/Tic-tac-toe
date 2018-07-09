@@ -1,0 +1,16 @@
+﻿**/logs
+**/out
+**/TestResults
+**/bin
+**/obj
+.vs
+*.map
+*.user
+dist/
+src/**/*.d.ts
+src/**/*.css
+!src/Services/TelemetryService/Aria/*.d.ts
+**/node_modules/*
+*.preprocessed
+**/npm-debug.log
+.vscode/

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "react-template",
+  "name": "tic-tac-toe",
   "private": true,
   "engines": {
     "node": "8.9.4",

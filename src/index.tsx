@@ -1,6 +1,6 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { App } from './components/app/App';
+import TicTacToeGrid from './components/interface/TicTacToeGrid';
 
 // Make element available to the dispose function
 let element: Element;
@@ -19,7 +19,7 @@ export function init() {
 
     //Run the init check as to whether to call L1 API
     ReactDOM.render(
-        <App />,
+        <TicTacToeGrid />,
         element
     );
 }

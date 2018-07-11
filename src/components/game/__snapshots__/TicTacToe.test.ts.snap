@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Can find the result of the game Game has no more possible moves, but there is a winner 1`] = `
+"O|O|X
+X|O|X
+O|X|X"
+`;
+
+exports[`Can find the result of the game The game is a tie if all cells are occupied 1`] = `
+"O|X|X
+X|O|O
+O|X|X"
+`;
+
+exports[`Doing actions in a round of the game. An action cannot be taken on a spot that is occupied 1`] = `"The location is already occupied"`;
+
+exports[`Doing actions in a round of the game. Crosses cannot make two moves in a row 1`] = `"Moves made by players have to alternate"`;
+
+exports[`Doing actions in a round of the game. It is not possible to make a move when all cells are field 1`] = `
+"O|O|X
+X|O|X
+O|X|X"
+`;
+
+exports[`Doing actions in a round of the game. It is not possible to make a move when all cells are field 2`] = `"There is no more possible moves. The game has ended"`;
+
+exports[`Doing actions in a round of the game. Noughts cannot make the first move 1`] = `"Moves made by players have to alternate"`;
+
+exports[`Doing actions in a round of the game. Noughts cannot make two moves in a row 1`] = `"Moves made by players have to alternate"`;

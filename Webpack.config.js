@@ -34,7 +34,7 @@ module.exports = (env) => {
             library: '[name]'
         },
         resolve: {
-            extensions: ['.Webpack.js', '.web.js', '.ts', '.js', '.tsx', '.css'],
+            extensions: ['.Webpack.js', '.web.js', '.ts', '.js', '.tsx', '.scss'],
         },
         module: {
             rules: [
@@ -46,7 +46,7 @@ module.exports = (env) => {
                         }]
                 },
                 {
-                    test: /\.css$/,
+                    test: /\.scss$/,
                     use: [
                         isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
                         {
@@ -67,10 +67,6 @@ module.exports = (env) => {
                     ]
                 },
                 {
-                    test: /\.(woff)$/,
-                    loader: 'url-loader?limit=64000&mimetype=application/font-woff&name=[name].[ext]'
-                },
-                {
                     test: /\.png$/,
                     loader: 'url-loader?mimetype=image/png'
                 },
@@ -82,7 +78,7 @@ module.exports = (env) => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: "css/[name].css",
+                filename: "css/[name].scss",
             })
         ],
         // watchOptions: {
